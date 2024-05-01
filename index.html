@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="index.css">
+    <div id="root1">
+        FROM HTML
+    </div>
+    <div id="root" >
+        FROM HTML
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script>
+        var root1 = document.getElementById('root1');
+        var heading = document.createElement('h1');
+        heading.innerHTML = "This from JS";
+        root1.appendChild(heading)
+    </script>
+    <script>
+        var heading2 = React.createElement('h2',{class:"red"},"THis is from react");
+        var root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(heading2)
+        console.log(heading2);
+    </script>
+</body>
+</html>
